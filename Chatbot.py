@@ -1,9 +1,8 @@
-#My ChatBot
+#Tong's ChatBot
 #
 #
 #
 #
-pip install openai
 import openai
 import Key
 
@@ -12,7 +11,7 @@ def generate_response(user_input):
         #Call the OpenAI API
         completion = openai.Completion.create(
             model="gpt-3.5-turbo",
-            messages=[{"role": "system", "content": "Assume the role a Python teacher, and thick step by step. Your name is Skippy Py."},
+            messages=[{"role": "system", "content": "Assume the role a Logistic Coordinator for semi trucks and thick step by step. Your name is Skippy Py."},
                      {"role": "user", "content": user_input}]
         )
 
@@ -32,7 +31,7 @@ def main():
 
         response = generate_response(user_input)
 
-        print("Python Study Bot", response)
+        print("Python Logistic Coordinator", response)
 
 if __name__ == "__main__":
     main()
